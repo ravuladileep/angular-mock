@@ -1,0 +1,5 @@
+<h5 class="virtual-scroll">Virtual-Scroll</h5>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let item of dataSource" class="example-item"> {{item.title || 'Loading...'}}</div>
+</cdk-virtual-scroll-viewport>
+

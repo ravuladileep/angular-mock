@@ -1,0 +1,6 @@
+<h5 class="text-center">Infinite-Scroll</h5>
+  <div class="container example-viewport" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll($event)">
+    <div class="example-item" *ngFor="let item of dataSource">
+      {{item.title}}
+    </div>
+  </div>
