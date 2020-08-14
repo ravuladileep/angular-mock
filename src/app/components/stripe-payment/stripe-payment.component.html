@@ -1,0 +1,28 @@
+<div class="col-md-6 mx-auto">
+
+<form novalidate (ngSubmit)="createToken()" [formGroup]="stripeTest">
+  <input type="text" formControlName="name" placeholder="Jane Doe">
+  <div class="m-3">
+  <ngx-stripe-card
+    [options]="cardOptions"
+    [elementsOptions]="elementsOptions"
+  ></ngx-stripe-card></div>
+  <button type="submit" class="btn btn-success m-5">
+    Buy
+  </button>
+</form>
+
+</div>
+<!-- <div
+  ngxStripeCardGroup
+  [formGroup]="stripeTest"
+  [elementsOptions]="elementsOptions"
+>
+  <input formControlName="name" />
+  <ngx-stripe-card-number [options]="cardOptions"></ngx-stripe-card-number>
+  <ngx-stripe-card-expiry [options]="cardOptions"></ngx-stripe-card-expiry>
+  <ngx-stripe-card-cvc [options]="cardOptions"></ngx-stripe-card-cvc>
+  <button type="submit" (click)="pay()">
+    PAY
+  </button>
+</div> -->

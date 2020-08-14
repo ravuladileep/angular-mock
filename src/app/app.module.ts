@@ -10,20 +10,28 @@ import { AppService } from './app.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { StripePaymentComponent } from './components/stripe-payment/stripe-payment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxStripeModule } from 'ngx-stripe';
+import { stripeKey } from './config/keys';
 
 @NgModule({
   declarations: [
     AppComponent,
     VirtualScrollComponent,
-    InfiniteScrollComponent
+    InfiniteScrollComponent,
+    StripePaymentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ScrollingModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxStripeModule.forRoot(stripeKey)
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
